@@ -1,0 +1,116 @@
+original_genre,parent_genre,included,notes
+0,,FALSE,Header artifact from source CSV
+acoustic,,FALSE,Production style not a musical genre
+afrobeat,World/Regional,TRUE,
+alt-rock,Rock,TRUE,
+alternative,Rock,TRUE,
+ambient,Electronic,TRUE,Ambient traces to Eno; modern ambient is electronic-leaning
+anime,Asian Pop,TRUE,Not strictly a genre; anime music is typically J-pop/J-rock
+black-metal,Metal,TRUE,
+bluegrass,Folk/Country,TRUE,
+blues,Jazz & Blues,TRUE,
+brazil,Latin,TRUE,Brazilian traditions (samba/bossa/MPB) grouped under Latin family
+breakbeat,Electronic,TRUE,
+british,,FALSE,Nationality label not a genre
+cantopop,Asian Pop,TRUE,
+chicago-house,Electronic,TRUE,
+children,,FALSE,Demographic label not a genre
+chill,,FALSE,Mood label not a genre
+classical,Classical,TRUE,
+club,,FALSE,Activity/context label not a genre
+comedy,,FALSE,Format label not a musical genre
+country,Folk/Country,TRUE,
+dance,,FALSE,Generic activity label; specific dance genres (house/techno) retained
+dancehall,Reggae/Caribbean,TRUE,
+death-metal,Metal,TRUE,
+deep-house,Electronic,TRUE,
+detroit-techno,Electronic,TRUE,
+disco,Soul/Funk,TRUE,Disco emerged from soul/funk lineage
+disney,,FALSE,Franchise not a genre
+drum-and-bass,Electronic,TRUE,
+dub,Electronic,TRUE,Originally Jamaican; modern usage typically electronic dub. Borderline with Reggae/Caribbean
+dubstep,Electronic,TRUE,
+edm,Electronic,TRUE,
+electro,Electronic,TRUE,
+electronic,Electronic,TRUE,
+emo,Rock,TRUE,
+folk,Folk/Country,TRUE,
+forro,Latin,TRUE,Brazilian regional genre
+french,,FALSE,Nationality label not a genre
+funk,Soul/Funk,TRUE,
+garage,Electronic,TRUE,UK garage (electronic) not garage rock
+german,,FALSE,Nationality label not a genre
+gospel,Soul/Funk,TRUE,Black gospel has direct soul lineage
+goth,Rock,TRUE,Goth rock (Sisters of Mercy  Bauhaus) not industrial
+grindcore,Metal,TRUE,
+groove,Soul/Funk,TRUE,
+grunge,Rock,TRUE,
+guitar,,FALSE,Instrument label not a genre
+happy,,FALSE,Mood label not a genre
+hard-rock,Rock,TRUE,
+hardcore,Metal,TRUE,Ambiguous between hardcore punk (Rock) and modern hardcore (Metal); Metal chosen based on modern Spotify usage
+hardstyle,Electronic,TRUE,
+heavy-metal,Metal,TRUE,
+hip-hop,Hip-Hop & R&B,TRUE,
+honky-tonk,Folk/Country,TRUE,
+house,Electronic,TRUE,
+idm,Electronic,TRUE,
+indian,World/Regional,TRUE,Indian musical traditions (classical/Bollywood/folk)
+indie,Rock,TRUE,Indie rock
+indie-pop,Pop,TRUE,
+industrial,Electronic,TRUE,Borderline rock/electronic; placed Electronic per MIR convention
+iranian,World/Regional,TRUE,
+j-dance,Asian Pop,TRUE,
+j-idol,Asian Pop,TRUE,
+j-pop,Asian Pop,TRUE,
+j-rock,Asian Pop,TRUE,Could go in Rock; Asian Pop chosen to group Asian-language pop together
+jazz,Jazz & Blues,TRUE,
+k-pop,Asian Pop,TRUE,
+kids,,FALSE,Demographic label not a genre
+latin,Latin,TRUE,
+latino,Latin,TRUE,
+malay,World/Regional,TRUE,
+mandopop,Asian Pop,TRUE,
+metal,Metal,TRUE,
+metalcore,Metal,TRUE,
+minimal-techno,Electronic,TRUE,
+mpb,Latin,TRUE,Música Popular Brasileira
+new-age,Classical,TRUE,Borderline ambient/classical; placed Classical for instrumental focus
+opera,Classical,TRUE,
+pagode,Latin,TRUE,Brazilian samba subgenre
+party,,FALSE,Activity label not a genre
+piano,,FALSE,Instrument label not a genre
+pop,Pop,TRUE,
+pop-film,Pop,TRUE,Soundtrack pop
+power-pop,Pop,TRUE,
+progressive-house,Electronic,TRUE,
+psych-rock,Rock,TRUE,
+punk,Rock,TRUE,
+punk-rock,Rock,TRUE,
+r-n-b,Hip-Hop & R&B,TRUE,
+reggae,Reggae/Caribbean,TRUE,
+reggaeton,Latin,TRUE,Latin/Caribbean hybrid; placed Latin per standard practice
+rock,Rock,TRUE,
+rock-n-roll,Rock,TRUE,
+rockabilly,Rock,TRUE,
+romance,,FALSE,Mood label not a genre
+sad,,FALSE,Mood label not a genre
+salsa,Latin,TRUE,
+samba,Latin,TRUE,
+sertanejo,Latin,TRUE,Brazilian country music
+show-tunes,,FALSE,Musical theater format; borderline but excluded for consistency
+singer-songwriter,Folk/Country,TRUE,
+ska,Reggae/Caribbean,TRUE,
+sleep,,FALSE,Mood/activity label not a genre
+songwriter,Folk/Country,TRUE,
+soul,Soul/Funk,TRUE,
+spanish,Latin,TRUE,Spanish-language music typically Latin
+study,,FALSE,Activity label not a genre
+swedish,,FALSE,Nationality label not a genre
+synth-pop,Pop,TRUE,
+tango,Latin,TRUE,
+techno,Electronic,TRUE,
+trance,Electronic,TRUE,
+trip-hop,Electronic,TRUE,
+turkish,World/Regional,TRUE,
+world-music,World/Regional,TRUE,
