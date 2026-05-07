@@ -1,0 +1,7 @@
+model,model_size_kb,n_params,inference_us_per_sample
+LR (A),4.2,51.0,3.2
+RF (A),214519.6,2742620.0,42.5
+GBM (A),535.0,,10.0
+LR (B),3.9,44.0,1.4
+RF (B),211540.0,2704616.0,52.2
+GBM (B),506.6,,8.1

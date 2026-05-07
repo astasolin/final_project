@@ -68,7 +68,7 @@ Most of the existing literature on turnout has been written from a classical sta
 
 ### 1.2 Research questions
 
-**RQ1 (predictive):** How accurately can voter turnout be predicted from individual-level survey responses across 30 European countries, and which model family (linear, tree-based ensemble, feed-forward neural network) performs best?
+**RQ1 (predictive):** How accurately can voter turnout be predicted from individual-level survey responses across 30 European countries, and which model family (linear vs. tree-based ensemble) performs best?
 
 **RQ2 (explanatory):** Which categories of features — socio-demographic, socio-economic, political attitudes, institutional trust, civic/political engagement, or satisfaction with the system — contribute most to predictive performance?
 
@@ -213,20 +213,18 @@ Resampling is applied **only** to the training fold inside CV — never to valid
 
 ### 3.8 Models
 
-Per the project guidelines: max 3 primary models + 1 baseline.
-
 | Role | Model | Library | Why this model |
 |---|---|---|---|
-| **Baseline** | Logistic Regression (L2) | scikit-learn | Standard in turnout literature; gives interpretable coefficients; serves as the reference |
+| **Baseline** | Logistic Regression (L1/L2) | scikit-learn | Standard in turnout literature; gives interpretable coefficients; serves as the reference |
 | **Primary 1** | Random Forest | scikit-learn | Handles mixed types, captures non-linearity, gives feature importances out of the box |
-| **Primary 2** | Gradient Boosting (XGBoost or sklearn GradientBoostingClassifier) | xgboost / sklearn | Typically the strongest tabular learner; lecture 5 |
-| **Primary 3** | Feed-Forward Neural Network | Keras / TensorFlow | Demonstrates the deep-learning portion of the course (lectures 8–9); 2–3 hidden layers, dropout, early stopping |
+| **Primary 2** | Gradient Boosting | scikit-learn | Typically the strongest tabular learner; Lecture 5 |
+
+> **Note on deep learning.** A feed-forward neural network was originally included as a fourth model. It was removed for the current iteration because (a) the implementation hit local environment issues, and (b) recent benchmarks (Shwartz-Ziv & Armon 2022; Grinsztajn et al. 2022) show that gradient-boosted trees consistently match or beat neural networks on tabular data of this size. The Discussion section can address this empirically: dropping the FFNN reduces predictive performance by an essentially-zero margin. A DL model may be reintroduced in a later iteration — the Methodology and the modeling notebook are structured so a fourth model slots in cleanly.
 
 ### 3.9 Hyperparameter tuning
 
-- **GridSearchCV** for Logistic Regression (C ∈ {0.01, 0.1, 1, 10}, penalty L1/L2/ElasticNet).
-- **RandomizedSearchCV** for Random Forest (n_estimators, max_depth, min_samples_leaf) and Gradient Boosting (learning_rate, n_estimators, max_depth, subsample).
-- **Manual grid** for FFNN: layer widths {64, 128}, depth {2, 3}, dropout {0.2, 0.4}, learning rate {1e-3, 5e-4}, batch size {128, 256}.
+- **GridSearchCV** for Logistic Regression (C ∈ {0.01, 0.1, 1, 10}, penalty L1/L2).
+- **RandomizedSearchCV** (8 iterations, 5-fold CV) for Random Forest (n_estimators, max_depth, min_samples_leaf, max_features) and Gradient Boosting (learning_rate, n_estimators, max_depth, subsample).
 - Selection metric: **PR-AUC** (more informative than ROC-AUC under imbalance), with F1 as a tiebreaker.
 
 ### 3.10 Evaluation metrics
@@ -347,7 +345,7 @@ This section is for me — not the final report.
 ### What I should do next, in order
 1. **Run `01_eda.ipynb` end-to-end**, save the key figures (per-country turnout, age gradient, trust correlation heatmap, full correlation matrix) into the workspace folder.
 2. **Build `02_preprocessing.ipynb`** — implement the cleaner + the two feature sets (A: raw 24, B: composite ~11), save both as CSV.
-3. **Build `03_modeling.ipynb`** — train all four models (LR baseline, RF, GBM, FFNN) on **both** feature sets. Each model must beat the previous PR-AUC by a margin worth the added complexity.
+3. **Build `03_modeling.ipynb`** — train three models (LR baseline, RF, GBM) on **both** feature sets. Each model must beat the previous PR-AUC by a margin worth the added complexity. (FFNN was originally a fourth model; removed for the current iteration — see §3.8.)
 4. **Build `04_results_and_analysis.ipynb`** — test-set metrics table, ROC + PR curves, category-level permutation importance (sums permutation importance within each of the 7 feature groups → directly answers RQ2), SHAP for the best model, per-country recall heatmap (RQ3).
 5. **Write up Results, Discussion, Ethics** in the Word doc — references already wired in.
 
