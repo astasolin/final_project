@@ -1,0 +1,17 @@
+{
+  "best_model": "GBM (A)",
+  "best_pr_auc": 0.9332,
+  "best_roc_auc": 0.8142,
+  "best_accuracy": 0.7419,
+  "best_f1_minority": 0.5585,
+  "baseline_lr_pr_auc_setA": 0.9277,
+  "baseline_lr_pr_auc_setB": 0.9274,
+  "top_category_setA": "political_interest",
+  "top_category_setB": "political_interest",
+  "best_country_recall": 0.9326923076923077,
+  "worst_country_recall": 0.17647058823529413,
+  "best_country": "BG",
+  "worst_country": "NO",
+  "n_test": 6971,
+  "class_balance": 0.781
+}
